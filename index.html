@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SPECIMEN PASSPORT MRZ</title>
+<style>
+  body {
+    background: #e0e0e0;
+    font-family: 'OCR-A', 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .passport {
+    width: 600px;
+    height: 380px;
+    background: linear-gradient(135deg, #1a3a6e, #2a5298);
+    color: white;
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+  .watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    font-size: 80px;
+    font-weight: bold;
+    color: rgba(255,255,255,0.08);
+    letter-spacing: 10px;
+    pointer-events: none;
+  }
+  .title { font-size: 22px; font-weight: bold; margin-bottom: 20px; }
+  .field { margin: 8px 0; font-size: 16px; }
+  .label { opacity: 0.7; font-size: 12px; }
+  .mrz {
+    background: #000;
+    color: #fff;
+    padding: 15px 10px;
+    margin-top: 30px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+  <div class="passport">
+    <div class="watermark">SPECIMEN</div>
+    <div class="title">SPECIMEN PASSPORT</div>
+    
+    <div class="field"><span class="label">Surname:</span> SPECIMEN</div>
+    <div class="field"><span class="label">Given Names:</span> TEST</div>
+    <div class="field"><span class="label">Passport No:</span> 000</div>
+    <div class="field"><span class="label">Nationality:</span> XXX</div>
+    <div class="field"><span class="label">Date of Birth:</span> 01 JAN 1980</div>
+    <div class="field"><span class="label">Sex:</span> M</div>
+    <div class="field"><span class="label">Expiry Date:</span> 01 JAN 2030</div>
+
+    <div class="mrz">
+      P<XXXSPECIMEN<<TEST<<<<<<<<<<<<<<<<<<<<<<<<<<<<<br>
+      0000000XXX8001014M3001019<<<<<<<<<<<<<<2
+    </div>
+  </div>
+</body>
+</html>
